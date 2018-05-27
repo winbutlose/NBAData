@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -41,10 +42,14 @@ public class NBATeamAdapter extends ArrayAdapter<NBATeam> {
         TextView tv_city = (TextView)convertView.findViewById(R.id.tv_city);
         TextView tv_nickname = (TextView)convertView.findViewById(R.id.tv_nickname);
         TextView tv_tricode = (TextView)convertView.findViewById(R.id.tv_tricode);
+        ImageView im_team = (ImageView)convertView.findViewById(R.id.imageview_teamimage);
 
         tv_city.setText(city);
         tv_nickname.setText(nickname);
         tv_tricode.setText(tricode);
+        String logoname = tricode.toLowerCase();
+        //im_team.setImageResource(R.drawable.resourcename);
+        im_team.setImageResource(context.getResources().getIdentifier(logoname, "drawable", context.getPackageName()));
 
         return convertView;
     }

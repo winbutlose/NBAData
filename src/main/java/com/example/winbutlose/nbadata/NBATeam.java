@@ -1,5 +1,7 @@
 package com.example.winbutlose.nbadata;
 
+import android.media.Image;
+
 public class NBATeam {
     private String city,nickname,tricode,fullName,urlName,confName,divName;
     private int teamId;
@@ -78,4 +80,5 @@ public class NBATeam {
     public void setTeamId(int teamId) {
         this.teamId = teamId;
     }
+
 }
